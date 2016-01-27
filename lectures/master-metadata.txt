@@ -41,4 +41,6 @@ Notes:
    AppX and two concurrent instances of AppY accessing (reading and mutating)
    the file contents.
 
-
+2. File namespace mutations (e.g., file creation or renaming) are atomic. 
+   They are handled exclusively by the master: namespace locking guarantees 
+   atomicity and correctness.
